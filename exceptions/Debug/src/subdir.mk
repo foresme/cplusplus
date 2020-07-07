@@ -4,13 +4,16 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../src/exceptions.cpp 
+../src/exceptions.cpp \
+../src/myExceptions.cpp 
 
 OBJS += \
-./src/exceptions.o 
+./src/exceptions.o \
+./src/myExceptions.o 
 
 CPP_DEPS += \
-./src/exceptions.d 
+./src/exceptions.d \
+./src/myExceptions.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
