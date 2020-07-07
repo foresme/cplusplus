@@ -9,6 +9,15 @@
 #include <iostream>
 using namespace std;
 
+class goesWrong {
+public:
+	goesWrong(){
+		char *longestArray = new char[9999999999999];
+		cout << longestArray << endl;
+		delete[] longestArray;
+	}
+};
+
 void errorThrower(){
 
 	bool error1 = false;
@@ -32,7 +41,8 @@ void errorThrower(){
 int main() {
 
 	try {
-		errorThrower();
+		//errorThrower();
+		//goesWrong wrong;
 	}
 	catch(int e){
 		cout << "Integer error" << endl;
@@ -43,5 +53,10 @@ int main() {
 	catch(string &e){
 		cout << "Non-primitive string error" << endl;
 	}
+	catch(bad_alloc &e){
+		cout << "Bad Alloc: " << e.what() << endl;
+	}
+
+	cout << "Still running" << endl;
 	return 0;
 }
