@@ -17,11 +17,11 @@ class Person{
 
 public:
 	Person(int age, string name): age(age), name(name) {
-		cout << "constructor" << endl;
+		//cout << "constructor" << endl;
 	}
 
 	~Person(){
-		cout << "destroyed" << endl;
+		//cout << "destroyed" << endl;
 	}
 /*
 
