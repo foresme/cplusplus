@@ -8,7 +8,7 @@
 #include "person.h"
 
 Person::Person(string name) {
-	luckiness = luck(rand() % 2);
+	luckiness = luck(rand() % 3);
 	this->name = name;
 }
 

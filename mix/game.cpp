@@ -6,21 +6,24 @@
  */
 
 #include "game.h"
+#include <array>
+//#include <iostream>
+using namespace std;
 
 Game::Game(Person player): player(player), steps(0) {
-	actions[0] = "There is a cloud!";
+	actions[0] = "Apple tree!";
 	actions[1] = "You found a star!";
-	actions[2] = "Apple tree!";
+	actions[2] = "You found a star!";
 	actions[3] = "There is a cloud!";
-	actions[4] = "You found a star!";
+	actions[4] = "An ugly monster stole your apple.";
 
-	actions[5] = "Apple tree!";
+	actions[5] = "You found a star!";
 	actions[6] = "You can't find anything to collect!";
 	actions[7] = "There is nothing to collect!";
 	actions[8] = "There is a cloud!";
-	actions[9] = "You found a star!";
+	actions[9] = "Apple tree!";
 
-	actions[10] = "Apple tree!";
+	actions[10] = "You found a star!";
 	actions[11] = "An ugly monster stole your apple.";
 	actions[12] = "Sun is shining and your cloud is gone.";
 	actions[13] = "Your clouds hate your stars.";
@@ -101,7 +104,11 @@ void Game::takeAction(int nextStep){
 }
 
 void Game::startGame(){
-	while(steps < 50){
+
+	string lucks[3] = {"lucky", "normal", "unlucky"};
+	cout << "You're " << lucks[player.getLuck()] << "! Let's play a game!" << endl;
+
+	while(steps < 25){
 		takeAction(takeStep());
 		if(player.getApplesSize() == 3){
 			cout << "YOU WON!" << endl;
