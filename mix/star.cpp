@@ -7,11 +7,11 @@
 
 #include <iostream>
 #include <ostream>
+#include "star.h"
 using namespace std;
 
-enum shape{small, big, huge, shiny, sun};
 
-inline ostream& operator<<(ostream &os, shape itsShape){
+ostream& operator<<(ostream &os, shape itsShape){
 
 	switch(itsShape){
 	case small:
@@ -34,19 +34,15 @@ inline ostream& operator<<(ostream &os, shape itsShape){
 	return os;
 }
 
-class Star{
-
-	shape itsShape;
-public:
-	Star(): itsShape() {};
-
-	Star(shape S): itsShape(S) {}
-
-	void print() const{
-		cout << itsShape << " " << flush;
-	}
-
+Star::Star(){
+	this->itsShape = shape(rand() % 5);
 };
+Star::Star(shape S): itsShape(S) {}
+void Star::print() const{
+	cout << itsShape << " " << flush;
+}
+
+
 
 
 

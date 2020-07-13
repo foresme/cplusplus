@@ -6,24 +6,23 @@
  */
 
 #include <iostream>
+#include "apple.h"
 using namespace std;
 
-class Apple{
-	string color;
+Apple::Apple(){
+	this->color = colors[rand() % 3];
+}
 
-public:
-	Apple(string color): color(color) {
+Apple::Apple(string color): color(color){}
 
-	}
+bool Apple::operator<(const Apple &other) const{
+	return color < other.color;
+}
 
-	bool operator<(const Apple &other) const{
-		return color < other.color;
-	}
+void Apple::print() const{
+	cout << "(" << color << ")" << endl;
+}
 
-	void print() const{
-		cout << "(" << color << ")" << endl;
-	}
-};
 
 
 

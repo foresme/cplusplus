@@ -8,12 +8,11 @@
 #include <iostream>
 #include <ostream>
 #include <map>
+#include "cloud.h"
 using namespace std;
 
-enum location {nexttoyou, sky, inyourhead, inyourhouse};
-enum color {pink, purple, babyblue, white, lilac, green };
 
-inline ostream& operator<<(ostream &os, const location itsLocation){
+ostream& operator<<(ostream &os, const location itsLocation){
 
 	if(itsLocation == nexttoyou){
 		return os << "It's next to you silly.";
@@ -31,7 +30,7 @@ inline ostream& operator<<(ostream &os, const location itsLocation){
 }
 
 
-inline ostream& operator<<(ostream &os, color itsColor){
+ostream& operator<<(ostream &os, color itsColor){
 	static map<color, string> colors;
 	if(colors.size() == 0){
 		colors[pink] = "It's a pink cloud.";
@@ -45,28 +44,22 @@ inline ostream& operator<<(ostream &os, color itsColor){
 	return os << colors[itsColor];
 }
 
+Cloud::Cloud(){
+	this->itsColor = color(rand() % 6);
+	this->itsLocation = location(rand() % 4);
+}
+Cloud::Cloud(color itsColor, location itsLocation): itsLocation(itsLocation), itsColor(itsColor) {}
 
-class Cloud{
-
-	location itsLocation;
-	color itsColor;
-
-public:
-	Cloud(color itsColor, location itsLocation): itsLocation(itsLocation), itsColor(itsColor) {
-
-	}
-
-	void whereisCloud(){
+void Cloud::whereisCloud(){
 		cout << itsLocation << endl;
 	}
 
-
-	void cloudsColor(){
+void Cloud::cloudsColor(){
 		cout << itsColor << endl;
-	}
+}
 
 
-};
+
 
 
 
