@@ -8,6 +8,9 @@
 #ifndef CLOUD_H_
 #define CLOUD_H_
 
+#include <ostream>
+using namespace std;
+
 enum location {nexttoyou, sky, inyourhead, inyourhouse};
 enum color {pink, purple, babyblue, white, lilac, green };
 
@@ -21,6 +24,7 @@ public:
 	void cloudsColor();
 };
 
-
+ostream& operator<<(ostream &os, const location itsLocation);
+ostream& operator<<(ostream &os, color itsColor);
 
 #endif /* CLOUD_H_ */

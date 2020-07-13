@@ -6,10 +6,8 @@
  */
 
 #include <iostream>
-#include <ostream>
 #include <map>
 #include "cloud.h"
-using namespace std;
 
 
 ostream& operator<<(ostream &os, const location itsLocation){

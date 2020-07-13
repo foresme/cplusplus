@@ -6,9 +6,7 @@
  */
 
 #include <iostream>
-#include <ostream>
 #include "star.h"
-using namespace std;
 
 
 ostream& operator<<(ostream &os, shape itsShape){

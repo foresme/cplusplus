@@ -8,6 +8,9 @@
 #ifndef STAR_H_
 #define STAR_H_
 
+#include <ostream>
+using namespace std;
+
 enum shape{small, big, huge, shiny, sun};
 
 class Star{
@@ -18,6 +21,7 @@ public:
 	void print() const;
 };
 
+ostream& operator<<(ostream &os, shape itsShape);
 
 
 #endif /* STAR_H_ */
