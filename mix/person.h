@@ -2,7 +2,7 @@
  * person.h
  *
  *  Created on: Jul 12, 2020
- *      Author: patates
+ *      Author: esme
  */
 
 #ifndef PERSON_H_

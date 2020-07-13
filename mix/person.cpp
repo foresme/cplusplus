@@ -2,7 +2,7 @@
  * person.cpp
  *
  *  Created on: Jul 12, 2020
- *      Author: patates
+ *      Author: esme
  */
 
 #include "person.h"
