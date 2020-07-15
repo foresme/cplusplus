@@ -6,3 +6,6 @@ Topics:
 	4. Maps
 	5. Multimaps
 	6. Sets
+	7. Stack and Queue
+	8. Sorting and Deque
+	9. Operator Overloading
