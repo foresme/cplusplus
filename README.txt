@@ -9,3 +9,4 @@ Topics:
 	7. Stack and Queue
 	8. Sorting and Deque
 	9. Operator Overloading
+	10. Template
